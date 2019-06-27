@@ -1,0 +1,111 @@
+.app-btn {
+    color: $white;
+    font-family: $font-family-sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    @extend .btn;
+}
+
+.app-btn-orange {
+    @include btn-theme ($orangeish, $bright-orange);
+}
+
+.app-btn-grey {
+    @include btn-theme ($brownish-grey, $greyish-brown);
+}
+
+.app-btn-light-grey {
+    @include btn-theme ($greyish, $warm-grey);
+}
+
+.app-btn-blue {
+    @include btn-theme ($turquoise-blue-two, $teal-blue);
+}
+
+.app-btn-blue-darker{
+    @include btn-theme (#4a90e2, #0b6fe3);
+}
+
+.app-btn-login {
+    @include btn-size (212px, 57px, 24px, 9px);
+    @include btn-shadow (0 2px 2px 0, $nobel);
+}
+
+@include media-breakpoint-up(md) {
+    // Small arigato button, konoyaro button
+    .app-btn-type1 {
+        @include app-btn-size(18px, 8px 12px, 4px);
+        min-width: 115px;
+    }
+
+    // Large arigato button, konoyaro button
+    .app-btn-type2 {
+        @include app-btn-size(22px, 7px 12px, 5px);
+        min-width: 180px;
+    }
+
+    // Exchange, search, change password button
+    .app-btn-type3 {
+        @include app-btn-size(20px, 9px 12px, 5px);
+        @include btn-shadow (0 2px 2px 0, $nobel);
+        min-width: 252px;
+    }
+}
+
+@include media-breakpoint-between(sm, md) {
+    .app-btn-type2,
+    .app-btn-type2,
+    .app-btn-type1 {
+        @include app-btn-size(14px, 8px 12px, 4px);
+        min-width: 110px;
+    }
+}
+
+
+@include media-breakpoint-down(xs) {
+    .app-btn-type2,
+    .app-btn-type2,
+    .app-btn-type1 {
+        @include app-btn-size(8px, 8px 12px, 4px);
+        min-width: 70px;
+    }
+}
+
+
+@include media-breakpoint-between(sm, md) {
+    .management-pagination.d-flex {
+
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .btn-responsive {
+        width: 100%;
+    }
+
+    .management-pagination.d-flex {
+        flex-direction: column;
+        padding-top: 15px;
+        .btn-responsive {
+            margin-bottom: 15px;
+        }
+
+        .pagination {
+            width: 100%;
+            order: 1;
+            justify-content: center !important;
+        }
+        .data_table_btn_group {
+            order: 2;
+            width: 100%;
+        }
+    }
+}
+
+
+
+// For management
+.manager-btn {
+    @extend .app-btn;
+
+}

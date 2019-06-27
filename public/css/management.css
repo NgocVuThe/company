@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page-body .left_column {
+    background: #38383e;
+}
+
+.page-body .wrapper_page{
+    position: relative;
+}
+.page-body .wrapper{
+    display: flex;
+}
+.menu-top{
+    height: 52px;
+    position: relative;
+}
+.page-body .nav-dark{
+    background-color: #cccc;
+    position: relative;
+}
+.page-body .page_title{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}

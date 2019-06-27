@@ -1,0 +1,104 @@
+.page_body {
+    $left_column_width: 300px;
+    $left_column_collapse_width: 55px;
+    background: #fff;
+    min-height: 100vh;
+
+    .wrapper_page {
+        position: relative;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .right_column,
+    .left_column {
+        // transition: width ease 0.2s, flex-basis ease 0.2s, flex-grow ease 0.2s;
+    }
+
+    .left_column {
+        //position: absolute;
+        width: $left_column_width;
+        flex: 0 0 $left_column_width;
+        min-height: 100vh;
+    }
+
+    .right_column {
+        //margin-left: $left_column_width;
+        //min-height: 100vh;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    &.menu_close {
+        .left_column {
+            width: $left_column_collapse_width;
+            flex: 0 0 $left_column_collapse_width;
+            .toggle_menu {
+                text-align: center;
+                .toggle_menu_icon {
+                    margin-right: 0;
+                }
+            }
+        }
+        .right_column {
+            //margin-left: $left_column_collapse_width;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .wrapper {
+            display: block;
+        }
+        .left_column {
+            left: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: 3;
+        }
+        .right_column {
+            position: relative;
+            margin-left: 0 !important;
+        }
+
+        &:not(.menu_close) {
+            .right_column:before {
+                content: "";
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                position: fixed;
+                z-index: 2;
+            }
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .wrapper_page {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .page_data {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+    }
+
+    @media (min-width: map-get($grid-breakpoints, 'md')) and (max-width: 1440px) {
+        .page_data {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+.app_version {
+    position: fixed;
+    bottom: 0;
+    right: 2px;
+    font-size: 0.5rem;
+}

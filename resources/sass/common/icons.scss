@@ -1,0 +1,61 @@
+.app-btn {
+    > .icon-arigato {
+        margin-right: 8px;
+    }
+}
+
+[class*=menu-icon-] {
+    display: inline-block;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.app-arigato-reason:before {
+    content: "\e90b";
+}
+.app-kono-reason:before {
+    content: "\e90c";
+}
+.app-user-list:before {
+    content: "\e90d";
+}
+.app-path:before {
+    content: "\e90e";
+}
+.icon-konoyaro-history:before {
+    content: "\e90f";
+}
+.app-arigato-history:before {
+    content: "\e910";
+}
+.app-icon-arigato:before {
+    content: "\e900";
+}
+.app-icon-gift:before {
+    content: "\e901";
+}
+.app-icon-hand:before {
+    content: "\e902";
+}
+.app-icon-heart:before {
+    content: "\e903";
+}
+.app-icon-heart-broken:before {
+    content: "\e904";
+}
+.app-icon-history:before {
+    content: "\e905";
+}
+.app-icon-lock:before {
+    content: "\e906";
+}
+.app-icon-logout:before {
+    content: "\e907";
+}
+.app-icon-search_lite:before {
+    content: "\e908";
+    color: #ccc;
+}
+.app-icon-user:before {
+    content: "\e909";
+}

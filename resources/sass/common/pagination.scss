@@ -1,0 +1,17 @@
+.app-pagination {
+    .page-link {
+        border-color: #ffc19b;
+        color: #ff6406;
+        padding: 10px 15px;
+    }
+
+    .page-item.active .page-link {
+        background-color: #ff6406;
+        border-color: #ff6406;
+    }
+
+    .page-item.disabled .page-link {
+        color: #b1b1b1;
+        border-color: #ffc19b;
+    }
+}

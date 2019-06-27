@@ -1,0 +1,6 @@
+.flash_message_list {
+    padding-top: 20px;
+    &:empty {
+        display: none;
+    }
+}
