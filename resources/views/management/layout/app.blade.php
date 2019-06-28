@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="{{ url('css/management.css') }}" type="text/css">
 </head>
 <body @yield('body-attribute') class="page-body @yield('body_class')" >
-    <div class="wrapper_page">
-        <div class="wrapper">
+    <div class="container-fluid wrapper_page">
+        <div class="row">
             <div class="left_column col-md-2">
-                @include('management.partials.menu_left')
+                    @include('management.partials.menu_left')
             </div>
             <div class="right_column col-md-10">
-                    @include('management.partials.menu_top')
+                @include('management.partials.menu_top')
                 <main class="main_page">
                     @yield('content')
                 </main>
@@ -26,13 +26,3 @@
     </div>
 </body>
 </html>
-
-<style>
-.left_column{
-    border: 1px solid black;
-}
-.right_column{
-    border: 1px solid red;
-}
-
-</style>
